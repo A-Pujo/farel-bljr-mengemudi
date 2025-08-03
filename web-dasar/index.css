@@ -1,0 +1,20 @@
+div {
+    padding: 10px;
+}
+
+.div-aqua {
+    background-color: aqua;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.div-aqua .ok1 {
+    color: red;
+    font-weight: bold;
+}
