@@ -1,11 +1,89 @@
+:root {
+  --primary-color: #b6895b;
+  --bg-color: #010101;
+  --text-color: #fffdfd;
+  --secondary-color: #f0f0f0;
+  --accent-color: #ff6347;
+  --border-radius: 8px;
+  --font-family: "Poppins", sans-serif;
+}
+
 body {
-  background-color: gray;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 h1 {
-  color: #145A32; /* hijau tua */
+  color: #fbc501; /* hijau tua */
   font-weight: bold;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(182, 137, 91, 0.8);
+  border-bottom: 1px solid var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff; /* warna putih */
+  text-decoration: none;
+}
+
+.navbar .navbar-logo span {
+  margin-left: 8px;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.navbar .navbar-nav a {
+  color: #fff; /* warna putih */
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1.5rem; /* tambah jarak antar menu */
+  text-decoration: underline; /* garis bawah */
+  padding: 10px 20px; /* tambah padding kiri-kanan */
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--bg-color);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--white);
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: width 0.2s linear, transform 0.2s linear,
+    border-bottom-color 0.2s linear;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+  border-bottom: 2px solid var(--primary-color);
 }
