@@ -58,9 +58,9 @@ h1 {
   color: #fff; /* warna putih */
   display: inline-block;
   font-size: 1rem;
-  margin: 0 1.5rem; /* tambah jarak antar menu */
+  margin: 0 1rem; /* tambah jarak antar menu */
   text-decoration: underline; /* garis bawah */
-  padding: 10px 20px; /* tambah padding kiri-kanan */
+  padding: 10px 10px; /* tambah padding kiri-kanan */
   border-radius: var(--border-radius);
   transition: background-color 0.3s ease;
 }
@@ -85,5 +85,47 @@ h1 {
 .navbar .navbar-nav a:hover::after {
   width: 100%;
   transform: scaleX(1);
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--white);
+}
+
+.navbar .navbar-extra a {
+  color: #fff !important; /* warna putih */
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+  text-decoration: underline;
+  padding: 10px 2px;
+  border-radius: var(--border-radius);
+  transition: color 0.3s, background-color 0.3s, border-bottom-color 0.3s;
+  position: relative;
+}
+
+.navbar .navbar-extra a::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--white);
+}
+
+.navbar .navbar-extra a:hover::after {
+  width: 100%;
+  background: var(--white);
+}
+img {
+  width: 100px;
+  height: auto;
+  display: block;
+  padding: 10px 0;
+  margin: 10px 0;
 }
